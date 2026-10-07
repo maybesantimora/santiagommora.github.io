@@ -130,23 +130,30 @@ figure img.cover { cursor: zoom-in; }
 .category-card p { margin: 0; color: var(--soft-text); }
 .category-card:hover img { opacity: 0.85; }
 
-/* ===== SHOP SOLD STICKER ===== */
-.category-card { position: relative; }
+/* ===== SOLD BADGE ===== */
+figure, .category-card { position: relative; }
+.sold-badge { display: none; }
+figure.sold .sold-badge,
 .category-card.sold .sold-badge {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 40%;
-  left: -10%;
-  width: 120%;
-  transform: rotate(-25deg);
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  transform: translate(-50%, -50%) rotate(-25deg);
   background: var(--accent);
   color: #ffffff;
   text-align: center;
-  padding: 0.4rem 0;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
+  padding: 1rem 0;
+  border: 4px solid #ffffff;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
 
