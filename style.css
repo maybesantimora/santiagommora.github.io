@@ -130,6 +130,26 @@ figure img.cover { cursor: zoom-in; }
 .category-card p { margin: 0; color: var(--soft-text); }
 .category-card:hover img { opacity: 0.85; }
 
+/* ===== SHOP SOLD STICKER ===== */
+.category-card { position: relative; }
+.category-card.sold .sold-badge {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  width: 120%;
+  transform: rotate(-25deg);
+  background: var(--accent);
+  color: #ffffff;
+  text-align: center;
+  padding: 0.4rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
 /* ===== SITE CREDITS ===== */
 .credits-page { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; border-bottom: none; max-width: none; width: 100%; }
 .credits-title { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
