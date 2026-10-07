@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- EDIT: the name on the browser tab for this page -->
-<title>Shop | santiago.makes</title>
+<title>Brush Strokes 05 | santiago.makes</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============ SIDEBAR ============
-     This exact block is in every page file. If you add, rename, or remove a link,
-     make the same change in ALL the page files. class="current" marks the page you are on. -->
 <aside>
   <a class="logo" href="index.html">santiago.makes</a>
   <nav>
     <a href="index.html">Portfolio</a>
-    <a href="about.html" >About</a>
-    <a href="CV.html" >CV</a>
+    <a href="about.html">About</a>
+    <a href="CV.html">CV</a>
     <a href="Shop.html" class="current">Shop</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -27,21 +23,21 @@
 <main>
 
   <div id="lightbox" class="lightbox" hidden>
-  <button class="lb-close" aria-label="Close">&times;</button>
-  <button class="lb-prev" aria-label="Previous">&#8249;</button>
-  <img class="lb-image" src="" alt="">
-  <button class="lb-next" aria-label="Next">&#8250;</button>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous">&#8249;</button>
+    <img class="lb-image" src="" alt="">
+    <button class="lb-next" aria-label="Next">&#8250;</button>
   </div>
 
   <section>
-    <h2>Brush Strokes 05</h2>
+    <h2>Tadpol Plate</h2>
 
     <div class="product">
-      <!-- EDIT: main photo and detail shots. Same pattern as your portfolio:
-           first image is class="cover", extra photos go inside "extra-shots". -->
-
-          <figure class="product-photo">
-        <img src="Site PORTFOLIO/Brush Strokes 05_1.jpg" alt="Hand-blown drinking glass" class="cover">
+      <figure class="product-photo sold">
+        <div class="photo-frame">
+          <img src="Site PORTFOLIO/Brush Strokes 05_1.jpg" alt="Hand-blown drinking glass" class="cover">
+          <span class="sold-badge">Sold</span>
+        </div>
         <div class="extra-shots" hidden>
           <img src="Site PORTFOLIO/Brush Strokes 05_2.jpg" alt="">
           <img src="Site PORTFOLIO/Brush Strokes 05_3.jpg" alt="">
@@ -50,23 +46,31 @@
           <img src="Site PORTFOLIO/Brush Strokes 05_6.jpg" alt="">
           <img src="Site PORTFOLIO/Brush Strokes 05_7.jpg" alt="">
           <img src="Site PORTFOLIO/Brush Strokes 05_8.jpg" alt="">
-
         </div>
       </figure>
 
       <div class="product-info">
-        <!-- EDIT: name, price, and description -->
         <h3>Tadpol Plate</h3>
         <p class="price">$100</p>
         <p>Each item is made by hand and minor variations to size, thickness and color result from this process.</p>
 
         <p class="order-note">To ship your order, please include your full name and mailing address in your email.</p>
 
-        <!-- EDIT: change the email if needed. The subject line fills in automatically. -->
-        <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=santiagommora@gmail.com&su=Interested%20in%20the%20Brush%20Strokes%2003%20&body=Name:%0AShipping%20Address:" target="_blank">Email to order</a>  </section>
+        <a class="btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=santiagommora@gmail.com&su=Interested%20in%20the%20Tadpol%20Plate&body=Name:%0AShipping%20Address:" target="_blank">Email to order</a>
+      </div>
+    </div>
+  </section>
 
-   
-<!-- Light Box (Fullscreen Gallery View w/ Detail Shots) -->
+  <footer class="site-footer">
+    <a href="shipping-policy.html">Shipping Policy</a>
+    <span class="dot">·</span>
+    <a href="intellectual-property.html">Intellectual Property</a>
+    <span class="dot">·</span>
+    <a href="site-credits.html">Site Credits</a>
+  </footer>
+
+</main>
+
 <script>
 const lightbox = document.getElementById('lightbox');
 const lbImage = lightbox.querySelector('.lb-image');
@@ -108,15 +112,5 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-    <!-- Footer (Shipping Policy | Intellectual Property | Site Credits) -->
-   <footer class="site-footer">
-     <a href="Shipping Policy.html">Shipping Policy</a>
-     <span class="dot">·</span>
-     <a href="Intellectual Property.html">Intellectual Property</a>
-     <span class="dot">·</span>
-     <a href="Site Credits.html">Site Credits</a>
-   </footer>
-   
-</main>
 </body>
 </html>
