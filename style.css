@@ -131,10 +131,9 @@ figure img.cover { cursor: zoom-in; }
 .category-card:hover img { opacity: 0.85; }
 
 /* ===== SOLD BADGE ===== */
-figure, .category-card { position: relative; }
+.photo-frame { position: relative; }
 .sold-badge { display: none; }
-figure.sold .sold-badge,
-.category-card.sold .sold-badge {
+.sold .sold-badge {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,14 +142,14 @@ figure.sold .sold-badge,
   left: 50%;
   width: 85%;
   transform: translate(-50%, -50%) rotate(-25deg);
-  background: var(--accent);
-  color: #ffffff;
+  background: transparent;
+  color: var(--accent);
   text-align: center;
   padding: 1rem 0;
-  border: 4px solid #ffffff;
+  border: 4px solid var(--accent);
   border-radius: 12px;
   font-weight: 800;
-  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  font-size: clamp(3rem, 4vw, 3rem);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
