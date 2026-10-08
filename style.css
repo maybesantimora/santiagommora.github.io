@@ -87,6 +87,7 @@ figcaption .label-year { }
   .grid { flex-direction: column; }
   .col { width: 100%; }
   .portfolio-full { padding-left: 1rem; padding-right: 1rem; }
+  #col-right { display: none; }
 }
 
 /* ===== CURRENT PAGE in the sidebar ===== */

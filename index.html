@@ -299,9 +299,16 @@ const colLeft = document.getElementById('col-left');
 const colRight = document.getElementById('col-right');
 const figures = Array.from(grid.querySelectorAll('figure'));
 figures.sort((a, b) => b.dataset.year - a.dataset.year);
-figures.forEach((fig, i) => {
-  (i % 2 === 0 ? colLeft : colRight).appendChild(fig);
-});
+
+const isMobile = window.matchMedia('(max-width: 760px)').matches;
+
+if (isMobile) {
+  figures.forEach(fig => colLeft.appendChild(fig));
+} else {
+  figures.forEach((fig, i) => {
+    (i % 2 === 0 ? colLeft : colRight).appendChild(fig);
+  });
+}
 </script>
 
 <!-- Light Box (Fullscreen Gallery View w/ Detail Shots) -->
