@@ -84,6 +84,8 @@ figcaption .label-year { }
   nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem 1rem; }
   section { padding: 3rem 1.5rem; }
   #home { min-height: auto; }
+  .grid { flex-direction: column; }
+  .col { width: 100%; }
 }
 
 /* ===== CURRENT PAGE in the sidebar ===== */
