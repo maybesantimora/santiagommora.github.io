@@ -84,9 +84,9 @@ figcaption .label-year { }
   nav { flex-direction: row; flex-wrap: wrap; gap: 0.3rem 1rem; }
   section { padding: 3rem 1.5rem; }
   #home { min-height: auto; }
-  .grid { flex-direction: column; }
-  .col { width: 100%; }
-  .portfolio-full { padding-left: 1rem; padding-right: 1rem; }
+  .grid { flex-direction: column; gap: 0.75rem; }
+  .col { width: 100%; gap: 0.75rem; }
+  .portfolio-full { padding-left: 0.5rem; padding-right: 0.5rem; }
   #col-right { display: none; }
 }
 
