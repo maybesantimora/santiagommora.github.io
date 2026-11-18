@@ -133,14 +133,15 @@ html, .lb-info { scrollbar-width: thin; scrollbar-color: #b5b5b5 transparent; }
 ::-webkit-scrollbar-thumb { background: #b5b5b5; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #8f8f8f; }
 
-/* Phones: image at the top, arrows under it, text snapped right below the arrows */
+/* Phones: image anchored at the top, arrows directly under it, text snapped below */
 @media (max-width: 760px) {
-  .lightbox { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 3fr) auto minmax(0, 2fr); grid-template-areas: "image image" "prev next" "info info"; gap: 0.25rem 1rem; padding: 3rem 1rem 1rem; }
-  .lb-image { grid-area: image; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center top; }
+  .lightbox { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "image image" "prev next" "info info"; align-content: start; align-items: start; gap: 0.25rem 1rem; padding: 4rem 1rem 2rem; overflow-y: auto; }
+  .lb-close { position: fixed; }
+  .lb-image { grid-area: image; flex: none; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; object-position: center top; }
   .lb-prev, .lb-next { position: static; transform: none; width: 3rem; height: 2.75rem; padding: 0; display: flex; align-items: center; justify-content: center; background: none; font-size: 2.75rem; line-height: 1; }
   .lb-prev { grid-area: prev; justify-self: start; }
   .lb-next { grid-area: next; justify-self: end; }
-  .lb-info { grid-area: info; align-self: stretch; width: 100%; max-height: none; min-height: 0; overflow-y: auto; }
+  .lb-info { grid-area: info; flex: none; width: 100%; max-height: none; overflow: visible; }
 }
 
 /* ===== Contact Icon Layout ===== */
