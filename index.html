@@ -25,6 +25,7 @@
  </aside>
 
   <div id="lightbox" class="lightbox" hidden>
+  <div class="lb-info" id="lb-info"></div>
    <button class="lb-close" aria-label="Close">&times;</button>
    <button class="lb-prev" aria-label="Previous">&#8249;</button>
    <img class="lb-image" src="" alt="">
@@ -66,6 +67,9 @@
         <img src="Site PORTFOLIO/Static Hold 1.jpg" alt="Blue vase, front view" class="cover">
         <div class="extra-shots" hidden>
         <img src="Site PORTFOLIO/Static Hold 2.jpg" alt="Blue vase, close-up of rim">
+      </div>
+      <div class="piece-description" hidden>
+         <p>This wall mounted sculpture explores mechanical leverage, structural strain, and the physical limits of hot glass. In the hotshop, a molten clear glass bubble was hot slumped directly over one hexagonal head of a heavy cast iron dumbbell, forming a precise, form fitting socket as it cooled. Mounted horizontally onto a painted wooden block, the piece relies on cantilevered tension to suspend the dense iron weight outward into space. The work contrasts the visual weight and raw industrial utility of iron against the apparent fragility and optical clarity of the glass joint supporting it.</p>
      </div>
         <figcaption>
         <span class="label-title">Static Hold</span>
@@ -84,6 +88,9 @@
         <img src="Site PORTFOLIO/Plank the Rate of Flow/Plank the Rate of Flow 4.jpg" alt="Blue vase, close-up of rim">
         <img src="Site PORTFOLIO/Plank the Rate of Flow/Plank the Rate of Flow 5.jpg" alt="Blue vase, close-up of rim">
      </div>
+     <div class="piece-description" hidden>
+         <p>This assemblage investigates the preservation of narrative through found objects and material contrast. A free-form glass vessel is hand-blown and shaped directly against a section of oxidized steel tubing, forcing a physical integration between the two materials. Resting on a raw wood base, the clear glass acts as a containment unit for a dense collection of spent brass shell casings. The work uses precise hotshop execution to join these disparate elements, confronting the viewer with themes of industrial decay, entropy, and the silent weight of accumulated history.</p>
+    </div>
         <figcaption>
         <span class="label-title">Plank The Rate of Flow</span>
         <span class="label-medium">blown glass, .223 rounds, .204 rounds, iron square stock, cherry wood</span>
@@ -315,6 +322,7 @@ if (isMobile) {
 <script>
 const lightbox = document.getElementById('lightbox');
 const lbImage = lightbox.querySelector('.lb-image');
+const lbInfo = document.getElementById('lb-info');
 let currentSet = [];
 let currentIndex = 0;
 
@@ -323,8 +331,17 @@ function openLightbox(figure, startIndex) {
   const extras = figure.querySelectorAll('.extra-shots img');
   currentSet = [cover, ...extras];
   currentIndex = startIndex;
+  lbInfo.innerHTML = buildInfo(figure);
   showImage();
   lightbox.hidden = false;
+}
+function buildInfo(figure) { 
+  const cap = figure.querySelector('figcaption');
+  const desc = figure.querySelector('.piece-description');
+  let html = '';
+  if (cap) html += '<div class="lb-details">' + cap.innerHTML + '</div>';
+  if (desc && desc.textContent.trim()) html += '<div class="lb-description">' + desc.innerHTML + '</div>';
+  return html;
 }
 function showImage() {
   const img = currentSet[currentIndex];
