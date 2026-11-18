@@ -137,8 +137,7 @@ html, .lb-info { scrollbar-width: thin; scrollbar-color: #b5b5b5 transparent; }
 @media (max-width: 760px) {
   .lightbox { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 50vh auto minmax(0, 1fr); grid-template-areas: "image image" "prev next" "info info"; gap: 0.75rem 1rem; padding: 3rem 1rem 1rem; }
   .lb-image { grid-area: image; width: 100%; height: 100%; min-height: 0; object-fit: contain; object-position: center bottom; }
-  .lb-prev, .lb-next { position: static; transform: none; width: 3.25rem; height: 3.25rem; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.15); font-size: 2rem; line-height: 1; }
-  .lb-prev { grid-area: prev; justify-self: start; }
+  .lb-prev, .lb-next { position: static; transform: none; width: 3.25rem; height: 3.25rem; padding: 0; display: flex; align-items: center; justify-content: center; background: none; font-size: 2.75rem; line-height: 1; }  .lb-prev { grid-area: prev; justify-self: start; }
   .lb-next { grid-area: next; justify-self: end; }
   .lb-info { grid-area: info; align-self: stretch; width: 100%; max-height: none; min-height: 0; overflow-y: auto; }
 }
