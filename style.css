@@ -125,12 +125,14 @@ figure img.cover { cursor: zoom-in; }
 .lb-close:hover, .lb-prev:hover, .lb-next:hover { color: var(--accent); }
 
 
-/* Phones: text panel drops below the image */
+/* Phones: text panel drops below the image, arrows sit in a fixed bar at the bottom */
 @media (max-width: 760px) {
-  .lightbox { flex-direction: column-reverse; gap: 1rem; padding: 3rem 1rem 1rem; }
+  .lightbox { flex-direction: column-reverse; gap: 1rem; padding: 3rem 1rem 5rem; }
   .lb-info { flex: none; width: 100%; max-height: 32vh; }
   .lb-image { flex: 1 1 0; width: 100%; height: auto; min-height: 0; }
-}
+  .lb-prev, .lb-next { top: auto; bottom: 1rem; transform: none; width: 3.25rem; height: 3.25rem; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.15); font-size: 2rem; line-height: 1; }
+  .lb-prev { left: 1rem; }
+  .lb-next { right: 1rem; }
 
 /* ===== Contact Icon Layout ===== */
 .icon-row { display: flex; gap: 2.5rem; align-items: center; }
